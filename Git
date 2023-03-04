@@ -21,7 +21,6 @@ git add a.html b.html c.html  /선택 다수 파일 고르는 옵션 (그럼 이
 git add .  /이 작업파일에 있는 모든 파일을 고르는 옵션
 git commit -m '메세지'  /기록할 파일 고른것에 "메세지"(이름표같은것) 와 함께 기록
 git commit -am '메세지'  /add와commit을 동시에 사용하는 옵션
-git branch -a  /생성된 브랜치 확인
 
 git branch -d 파일이름  /브랜치이름병합이 완료된 브랜치 삭제 (삭제할 브랜치에 있으면 삭제안됨 switch해서 옮겨서 삭제할것)
 git branch -D 파일이름  /병합하지 않은 브랜치 삭제 --delete --force(강제삭제)
