@@ -22,13 +22,19 @@ git add .  /이 작업파일에 있는 모든 파일을 고르는 옵션
 git commit -m '메세지'  /기록할 파일 고른것에 "메세지"(이름표같은것) 와 함께 기록
 git commit -am '메세지'  /add와commit을 동시에 사용하는 옵션
 
+git branch -d 파일이름  /브랜치이름병합이 완료된 브랜치 삭제 (삭제할 브랜치에 있으면 삭제안됨 switch해서 옮겨서 삭제할것)
+git branch -D 파일이름  /병합하지 않은 브랜치 삭제 --delete --force(강제삭제)
+git rm --cached 파일이름  /로컬저장소는 유지 원격저장소에서만 삭제
+git commit -m 'Delete 파일이름'  /삭제 시점의 커밋을 꼭 해줘야 삭제 완료
+git rm 파일이름  /로컬저장소 및 git저장소 모두에서 파일 삭제 그후
+git commit -m 'Delete 파일이름'  /삭제 시점의 커밋을 꼭 해줘야 삭제 완료
+
 git branch a  /a 브런치(복사본) 생성  (branch: commit의 복사본)
-git switch b  /b 브런치(본사본) 변경&이동
+git switch b  /b 브런치(본사본) 변경&이동  (옛버전 옵션인 checkout과 동일)
 
 git merge a  /현재브런치에 a를 합치기 ※merge하다 conflct오류 시-> 1.원하는코드남기기 2.git add 3.git commit
 git merge --squash a  /squash and merge 하는 법 ( 참고 이미지 보거나 구글링하기 )
-git branch -d  /브랜치이름병합이 완료된 브랜치 삭제
-git branch -D  /병합하지 않은 브랜치 삭제시
+
 
 git restore c  /c파일 최근커밋상태로 복구
 git restore --source d47c13d b  /b파일 커밋아이디시점대로 복구 (d47c13d 는 b파일의 커밋아이디임)
